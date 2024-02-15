@@ -51,4 +51,12 @@ public class EnemyMovement : MonoBehaviour
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.GetComponent<PlayerStats>())
+        {
+            Debug.Log("hit");
+        }
+    }
 }

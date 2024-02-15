@@ -13,4 +13,13 @@ public class StrawHat : MonoBehaviour
     {
         transform.RotateAround(rotateAround.transform.position, Vector3.forward, speed * Time.deltaTime);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.GetComponent<EnemyMovement>())
+        {
+            Destroy(collision.gameObject); 
+        }
+    }
+
 }

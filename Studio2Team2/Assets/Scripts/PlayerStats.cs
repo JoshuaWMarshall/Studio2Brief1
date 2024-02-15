@@ -7,6 +7,7 @@ public class PlayerStats : MonoBehaviour
     public int playerLvl;
     public int playerXp;
     public int playerXpThreshold;
+    public int playerHp;
     // Start is called before the first frame update
     void Start()
     {
