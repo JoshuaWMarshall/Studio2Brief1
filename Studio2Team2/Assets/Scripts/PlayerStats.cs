@@ -14,13 +14,14 @@ public class PlayerStats : MonoBehaviour
         playerLvl = 1;
         playerXp = 0;
         playerXpThreshold = playerLvl * 100;
+        playerHp = 100;
 
     }
-
-    // Update is called once per frame
-    void Update()
+  
+        // Update is called once per frame
+        void Update()
     {
         // debug log is just to test if its working or not.
-        Debug.Log("player level = " + playerLvl + " player xp threshold = " + playerXpThreshold);
+        // Debug.Log("player level = " + playerLvl + " player xp threshold = " + playerXpThreshold);
     }
 }
