@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 7393424067449620436}
   - component: {fileID: 1117920939260779272}
   - component: {fileID: -746248276001037323}
-  - component: {fileID: 8345625014708496271}
   m_Layer: 0
   m_Name: enemyPrefab
   m_TagString: Enemy
@@ -31,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 2593274611804329350}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.4929, y: 0, z: 0}
+  m_LocalPosition: {x: -7.4929, y: 3.5971, z: 0}
   m_LocalScale: {x: 0.6541, y: 0.6541, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -179,19 +178,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xpModel: {fileID: 6707515980984932172, guid: a30fd6c46b82716479b588dc4a434245, type: 3}
-  health: 10
+  health: 0
   transform: {fileID: 856233981728368685}
---- !u!114 &8345625014708496271
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2593274611804329350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c78fc72f0a7d0c94d8b517e9ee9393bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyHealth: 10
-  enemyDamage: 0

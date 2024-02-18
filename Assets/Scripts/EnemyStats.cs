@@ -15,13 +15,17 @@ public class EnemyStats : MonoBehaviour
         
     }
 
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<PlayerStats>())
+        {
+            other.GetComponent<PlayerStats>().playerHp -= 5;
+            Debug.Log("You took 25 damage");
+        }
+    }
     // Update is called once per frame
     void Update()
     {
-        if(enemyHealth <=0)
-        {
-            Destroy(gameObject);
-        }
+        
     }
 }
