@@ -6,7 +6,7 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
     float currentTime = 0f;
-    float startingTime = 500f;
+    float startingTime = 60f;
 
     public TextMeshProUGUI countdownTimer;
     // Start is called before the first frame update
@@ -26,6 +26,7 @@ public class Timer : MonoBehaviour
         {
             
             currentTime = 0;
+
             
 
         }

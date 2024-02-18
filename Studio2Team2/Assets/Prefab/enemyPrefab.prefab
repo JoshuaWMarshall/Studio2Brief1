@@ -116,7 +116,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -179,8 +179,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xpModel: {fileID: 6707515980984932172, guid: a30fd6c46b82716479b588dc4a434245, type: 3}
-  health: 10
   transform: {fileID: 856233981728368685}
+  enemyHealth: 10
 --- !u!114 &-1480550114908424118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,3 +195,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHealth: 10
   enemyDamage: 5
+  force: 5
+  xpDropper: {fileID: -746248276001037323}

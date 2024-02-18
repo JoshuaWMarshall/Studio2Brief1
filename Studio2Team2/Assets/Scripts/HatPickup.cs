@@ -6,6 +6,7 @@ public class HatPickup : MonoBehaviour
 {
     public GameObject StrawHat;
     public GameObject StrawHat1;
+    public GameObject StrawHatVisual;
 
 
     // Start is called before the first frame update
@@ -22,6 +23,8 @@ public class HatPickup : MonoBehaviour
             
             StrawHat.SetActive(true);
             StrawHat1.SetActive(true);
+
+            StrawHatVisual.SetActive(true);
 
             Destroy(gameObject);
         }
