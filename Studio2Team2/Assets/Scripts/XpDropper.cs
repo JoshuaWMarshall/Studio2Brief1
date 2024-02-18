@@ -14,8 +14,9 @@ public class XpDropper : MonoBehaviour
     {
         if(health < 0 || health == 0)
         {
-            Destroy(gameObject);
             DropXp();
+            Destroy(gameObject);
+           
         }
     }
 

@@ -57,6 +57,9 @@ public class EnemyMovement : MonoBehaviour
         if (collision.GetComponent<PlayerStats>())
         {
             Debug.Log("hit");
+            
+            collision.GetComponent<PlayerStats>().playerHp -= 5;
+            Debug.Log("You took 25 damage");
         }
     }
 }
