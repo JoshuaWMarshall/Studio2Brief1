@@ -16,9 +16,12 @@ public class StrawHat : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<EnemyMovement>())
+        if (collision.GetComponent<EnemyStats>())
         {
-            Destroy(collision.gameObject); 
+            collision.GetComponent<EnemyStats>().enemyHealth -= 5;
+            Debug.Log("dmg enemy 5");
+
+            
         }
     }
 

@@ -8,9 +8,13 @@ public class PlayerStats : MonoBehaviour
     public int playerXp;
     public int playerXpThreshold;
     public int playerHp;
+
+    public GameObject Gameover;
+
     // Start is called before the first frame update
     void Start()
     {
+
         playerLvl = 1;
         playerXp = 0;
         playerXpThreshold = playerLvl * 100;
@@ -23,5 +27,13 @@ public class PlayerStats : MonoBehaviour
     {
         // debug log is just to test if its working or not.
         // Debug.Log("player level = " + playerLvl + " player xp threshold = " + playerXpThreshold);
+
+        if(playerHp <=0)
+        {
+
+            playerHp= 0;
+            Gameover.SetActive(true);
+            
+        }
     }
 }
