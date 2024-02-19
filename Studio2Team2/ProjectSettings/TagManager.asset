@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - StrawHat
+  - Xp
   layers:
   - Default
   - TransparentFX
