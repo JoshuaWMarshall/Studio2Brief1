@@ -37,7 +37,7 @@ public class PlayerStats : MonoBehaviour
          }
     }
         // Update is called once per frame
-<<<<<<< HEAD
+
         void Update()
         {
             // debug log is just to test if its working or not.
@@ -51,7 +51,7 @@ public class PlayerStats : MonoBehaviour
         }
               
         
-=======
+
     void Update()
     {
         // debug log is just to test if its working or not.
@@ -96,6 +96,4 @@ public class PlayerStats : MonoBehaviour
     }
     
 
-    
->>>>>>> 4f6176268ef21cc84bb128ad1013c805ad395978
 }
