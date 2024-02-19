@@ -12,6 +12,9 @@ public class EnemyMovement : MonoBehaviour
 
     public float rotateSpeed = 0.05f;
 
+
+    //private float Strength = 16f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +39,23 @@ public class EnemyMovement : MonoBehaviour
             RotateTowardsTarget();
         }
 
+        
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            Debug.Log("arghhh");
+
+            //Vector2 direction = (transform.position);
+            //rb.AddForce(direction * Strength, ForceMode2D.Impulse);
+
+
+
+
+        }
     }
 
     private void RotateTowardsTarget()

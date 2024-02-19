@@ -6,20 +6,17 @@ public class XpDropper : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject xpModel;
-    public int health;
+    
     public new Transform transform;
 
+    public int enemyHealth;
     // Update is called once per frame
     void Update()
     {
-        if(health < 0 || health == 0)
-        {
-            Destroy(gameObject);
-            DropXp();
-        }
+        
     }
 
-    void DropXp()
+    public void DropXp()
     {
         // find position of the enemy and then spawn xp at the location of enemy's death location
         Vector2 position = transform.position;

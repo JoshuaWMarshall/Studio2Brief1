@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -8,6 +9,12 @@ public class PlayerStats : MonoBehaviour
     public int playerXp;
     public int playerXpThreshold;
     public int playerHp;
+
+
+    public TextMeshProUGUI PlayerHpUI;
+
+    public TextMeshProUGUI pointEarner;
+
 
     public GameObject Gameover;
 
@@ -17,7 +24,7 @@ public class PlayerStats : MonoBehaviour
 
         playerLvl = 1;
         playerXp = 0;
-        playerXpThreshold = playerLvl * 100;
+        playerXpThreshold = playerLvl * 10;
         playerHp = 100;
 
     }
@@ -30,6 +37,7 @@ public class PlayerStats : MonoBehaviour
          }
     }
         // Update is called once per frame
+<<<<<<< HEAD
         void Update()
         {
             // debug log is just to test if its working or not.
@@ -43,4 +51,51 @@ public class PlayerStats : MonoBehaviour
         }
               
         
+=======
+    void Update()
+    {
+        // debug log is just to test if its working or not.
+        // Debug.Log("player level = " + playerLvl + " player xp threshold = " + playerXpThreshold);
+
+        if(playerHp <=0)
+        {
+            GameOverYeah();
+            
+            
+        }
+
+        if(playerXp >= playerXpThreshold)
+        {
+            LevelUp();
+        }
+
+
+        PlayerHpUI.text = playerHp.ToString("HP:000");
+
+        pointEarner.text = playerXp.ToString("P:00");
+       
+
+        
+
+
+    }
+    void LevelUp()
+    {
+        playerLvl++;
+        playerXpThreshold = playerLvl * 10;
+        
+
+
+    }
+
+    public void GameOverYeah()
+    {
+        playerHp = 0;
+        Gameover.SetActive(true);
+        Time.timeScale = 0;
+    }
+    
+
+    
+>>>>>>> 4f6176268ef21cc84bb128ad1013c805ad395978
 }
