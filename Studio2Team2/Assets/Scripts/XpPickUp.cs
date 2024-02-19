@@ -25,6 +25,8 @@ public class XpPickUp : MonoBehaviour
            collision.GetComponent<PlayerStats>().playerXp ++;
            Debug.Log("dmg enemy 5");
 
+         
+
            Destroy(gameObject); 
 
        }

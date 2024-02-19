@@ -8,6 +8,8 @@ public class Timer : MonoBehaviour
     float currentTime = 0f;
     float startingTime = 60f;
 
+    public GameObject Gameover;
+
     public TextMeshProUGUI countdownTimer;
     // Start is called before the first frame update
     void Start()
@@ -27,9 +29,9 @@ public class Timer : MonoBehaviour
             
             currentTime = 0;
 
-            
-
         }
+
+       
 
     }
 }

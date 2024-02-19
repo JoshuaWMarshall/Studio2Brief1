@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 2593274611804329350}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.4929, y: 3.5971, z: 0}
+  m_LocalPosition: {x: 1624.502, y: 325.6342, z: 0}
   m_LocalScale: {x: 0.6541, y: 0.6541, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -197,3 +197,4 @@ MonoBehaviour:
   enemyDamage: 5
   force: 5
   xpDropper: {fileID: -746248276001037323}
+  score: {fileID: 0}
