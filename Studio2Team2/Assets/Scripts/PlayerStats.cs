@@ -38,17 +38,7 @@ public class PlayerStats : MonoBehaviour
     }
         // Update is called once per frame
 
-        void Update()
-        {
-            // debug log is just to test if its working or not.
-            // Debug.Log("player level = " + playerLvl + " player xp threshold = " + playerXpThreshold);
-
-            if (playerHp <= 0)
-            {
-                playerHp = 0;
-                Gameover.SetActive(true);
-            }
-        }
+      
               
         
 
