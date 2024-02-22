@@ -1102,6 +1102,7 @@ MonoBehaviour:
   pointEarner: {fileID: 0}
   StartMenu: {fileID: 1365999088}
   PauseMenu: {fileID: 1222825941}
+  GameMusic: {fileID: 1685700148}
   enemyPoints: 0
 --- !u!1 &638533626
 GameObject:
@@ -3271,7 +3272,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1685700149
 AudioSource:
   m_ObjectHideFlags: 0

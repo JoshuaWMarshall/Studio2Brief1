@@ -15,6 +15,8 @@ public class Score : MonoBehaviour
 
     public GameObject PauseMenu;
 
+    public GameObject GameMusic;
+
     public int enemyPoints;
 
     void Start()
@@ -40,6 +42,7 @@ public class Score : MonoBehaviour
         {
             Time.timeScale = 0;
             PauseMenu.SetActive(true);
+            GameMusic.SetActive(false);
 
         }
     }
@@ -58,12 +61,14 @@ public class Score : MonoBehaviour
     {
         Time.timeScale = 1;
         StartMenu.SetActive(false);
+        GameMusic.SetActive(true);
     }
 
     public void Resume()
     {
         Time.timeScale = 1;
         PauseMenu.SetActive(false);
+        GameMusic.SetActive(true);
     }
 
 }
