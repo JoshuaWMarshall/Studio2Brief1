@@ -15,6 +15,8 @@ public class PlayerStats : MonoBehaviour
 
     public TextMeshProUGUI pointEarner;
 
+    public GameObject GameMusic;
+
 
     public GameObject Gameover;
 
@@ -83,6 +85,7 @@ public class PlayerStats : MonoBehaviour
         playerHp = 0;
         Gameover.SetActive(true);
         Time.timeScale = 0;
+        GameMusic.SetActive(false);
     }
     
 

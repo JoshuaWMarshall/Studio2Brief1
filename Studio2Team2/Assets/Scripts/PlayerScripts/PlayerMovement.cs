@@ -22,8 +22,15 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] KeyCode leftKey;
     [SerializeField] KeyCode rightKey;
 
+
+    
+
+    
+    
+
     #endregion
 
+    
 
     // Start is called before the first frame update
     void Start()
@@ -60,6 +67,14 @@ public class PlayerMovement : MonoBehaviour
             keyVertical = -1f;
         }
         else { keyVertical = 0f; }
+
+
+      
+
+        
+
+       
+
     }
 
 
@@ -67,5 +82,7 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         playerRigidBody.velocity = new Vector2(keyHorizontal * movementSpeed, keyVertical * movementSpeed);
+
+       
     }
 }
