@@ -6,7 +6,7 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
     float currentTime = 0f;
-    float startingTime = 60f;
+    float startingTime = 0f;
 
     public GameObject Gameover;
 
@@ -21,7 +21,7 @@ public class Timer : MonoBehaviour
     void Update()
     {
         
-        currentTime -= 1 * Time.deltaTime;
+        currentTime += 1 * Time.deltaTime;
         countdownTimer.text = currentTime.ToString("00:00");
 
         if (currentTime <= 0)
