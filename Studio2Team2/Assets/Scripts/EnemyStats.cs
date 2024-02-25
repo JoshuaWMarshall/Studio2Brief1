@@ -45,7 +45,7 @@ public class EnemyStats : MonoBehaviour
         {
            xpDropper.DropXp();
 
-            EnemyKills++;
+            
 
             Destroy(gameObject);
         }
