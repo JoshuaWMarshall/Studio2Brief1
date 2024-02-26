@@ -7,7 +7,7 @@ public class Timer : MonoBehaviour
 {
     float currentTime = 0f;
     float startingTime = 0f;
-    float BossTime = 10f;
+    float BossTime = 30f;
 
     public GameObject Gameover;
 
