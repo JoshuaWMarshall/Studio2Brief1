@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HatPickup : MonoBehaviour
+public class WizardHatPickup : MonoBehaviour
 {
-    public GameObject StrawHat;
-    public GameObject StrawHat1;
-    public GameObject StrawHatVisual;
+    public GameObject Fireball;
+    public GameObject Fireball1;
+    public GameObject WizardHatVisual;
+    
 
 
     // Start is called before the first frame update
@@ -21,10 +22,10 @@ public class HatPickup : MonoBehaviour
         {
             Debug.Log("wIN");
             
-            StrawHat.SetActive(true);
-            StrawHat1.SetActive(true);
+            Fireball.SetActive(true);
+            Fireball1.SetActive(true);
 
-            StrawHatVisual.SetActive(true);
+            WizardHatVisual.SetActive(true);            
 
             Destroy(gameObject);
         }

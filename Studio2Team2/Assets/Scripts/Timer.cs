@@ -7,8 +7,12 @@ public class Timer : MonoBehaviour
 {
     float currentTime = 0f;
     float startingTime = 0f;
+    float BossTime = 10f;
 
     public GameObject Gameover;
+
+    public GameObject BossDoor;
+    public GameObject BossDoor1;
 
     public TextMeshProUGUI countdownTimer;
     // Start is called before the first frame update
@@ -31,6 +35,13 @@ public class Timer : MonoBehaviour
 
         }
 
+        if (currentTime >= BossTime)
+        {
+            BossDoor.SetActive(false);
+            BossDoor1.SetActive(false);
+
+            Debug.Log("the boss has awoken");
+        }
        
 
     }

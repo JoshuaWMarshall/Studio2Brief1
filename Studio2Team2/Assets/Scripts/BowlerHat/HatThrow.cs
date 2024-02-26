@@ -21,7 +21,7 @@ public class HatThrow : MonoBehaviour
             Destroy(gameObject); 
 
         }
-        Destroy(bowlerhat, 5f);
+        Destroy(bowlerhat, 3f);
     }
 
     void update()
