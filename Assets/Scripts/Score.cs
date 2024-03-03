@@ -17,11 +17,14 @@ public class Score : MonoBehaviour
 
     public GameObject GameMusic;
 
+    
+
     public int enemyPoints;
 
     void Start()
     {
         Time.timeScale = 0;
+        
         StartMenu.SetActive(true);
         PauseMenu.SetActive(false);
     }

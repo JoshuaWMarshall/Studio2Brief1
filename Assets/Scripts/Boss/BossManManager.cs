@@ -13,21 +13,41 @@ public class BossManManager : MonoBehaviour
     private Rigidbody2D rb;
 
     public float rotateSpeed = 0.05f;
+
+    public float distanceToShoot = 5f;
+    public float distanceToStop = 1f;
+
+    public Transform firingPoint;
+
+    public float fireRate;
+    private float timeToFire;
+    public float throwForce = 20f;
+
+    public GameObject BossFireballPrefab;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        timeToFire = 0f;
     }
 
 
     private void FixedUpdate()
     {
-        rb.velocity = transform.up * speed;
+        if (Vector2.Distance(target.position, transform.position) >= distanceToStop)
+        {
+            rb.velocity = transform.up * speed;
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Vector2.Distance(target.position, transform.position) <= distanceToShoot)
+        {
+            Shoot();
+        }
         if (!target)
         {
             GetTarget();
@@ -35,6 +55,21 @@ public class BossManManager : MonoBehaviour
         else
         {
             RotateTowardsTarget();
+        }
+    }
+
+    private void Shoot()
+    {
+        if (timeToFire <= 0f)
+        {
+            GameObject fireball = Instantiate(BossFireballPrefab, firingPoint.position, firingPoint.rotation);
+            fireball.GetComponent<Rigidbody2D>().AddForce(firingPoint.up * throwForce, ForceMode2D.Impulse);
+            Debug.Log("Shoot");
+            timeToFire = fireRate;
+        }
+        else
+        {
+            timeToFire -= Time.deltaTime;
         }
     }
 

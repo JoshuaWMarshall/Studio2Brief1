@@ -11,6 +11,8 @@ public class Timer : MonoBehaviour
 
     public GameObject Gameover;
 
+    public GameObject BossText;
+
     public GameObject BossDoor;
     public GameObject BossDoor1;
 
@@ -19,6 +21,7 @@ public class Timer : MonoBehaviour
     void Start()
     {
         currentTime = startingTime;
+        BossText.SetActive(false);
     }
 
     // Update is called once per frame
@@ -37,8 +40,10 @@ public class Timer : MonoBehaviour
 
         if (currentTime >= BossTime)
         {
+            BossText.SetActive(true);
             BossDoor.SetActive(false);
             BossDoor1.SetActive(false);
+
 
             Debug.Log("the boss has awoken");
         }

@@ -16,6 +16,11 @@ public class PlayerMovement : MonoBehaviour
     // Player's Rigidbody
     public Rigidbody2D playerRigidBody;
 
+    public Rigidbody2D Rb;
+
+    
+
+
     [Header("Player Movement Keybinds")]
     [SerializeField] KeyCode upKey;
     [SerializeField] KeyCode downKey;
@@ -30,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
 
     #endregion
 
-    
+    public float knockbackForce;
 
     // Start is called before the first frame update
     void Start()
@@ -77,10 +82,27 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            
+            Rigidbody2D Enemy = collision.GetComponent<Rigidbody2D>();
+            Vector2 difference = Enemy.transform.position - transform.position;
+            difference = difference.normalized * knockbackForce;
+            Enemy.AddForce(difference, ForceMode2D.Impulse);
+            Debug.Log("Check");
+
+        }
+    }
+
 
 
     void FixedUpdate()
     {
+        
         playerRigidBody.velocity = new Vector2(keyHorizontal * movementSpeed, keyVertical * movementSpeed);
 
        

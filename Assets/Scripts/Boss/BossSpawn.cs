@@ -15,7 +15,16 @@ public class BossSpawn : MonoBehaviour
     public GameObject SpawnManager8;
 
     public GameObject BossMenu;
-#endregion
+
+    public GameObject BossText;
+
+    #endregion
+    void Start()
+    {
+
+        
+
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         SpawnManager1.SetActive(false);
