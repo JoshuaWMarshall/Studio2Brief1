@@ -12,16 +12,16 @@ public class BossManManager : MonoBehaviour
 
     private Rigidbody2D rb;
 
-    public float rotateSpeed = 0.05f;
+    public float rotateSpeed = 0.10f;
 
     public float distanceToShoot = 5f;
-    public float distanceToStop = 1f;
+    public float distanceToStop = 5f;
 
     public Transform firingPoint;
 
     public float fireRate;
     private float timeToFire;
-    public float throwForce = 20f;
+    public float throwForce = 2f;
 
     public GameObject BossFireballPrefab;
     // Start is called before the first frame update
