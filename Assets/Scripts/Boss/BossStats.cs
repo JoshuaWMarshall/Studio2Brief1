@@ -1,21 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossStats : MonoBehaviour
 {
     public int enemyHealth;
 
+    public int MaxenemyHealth;
+
     public GameObject WinMenu;
+    
+    [SerializeField] private Slider slider;
 
-
-
+  
 
 
     // Start is called before the first frame update
     void Start()
     {
-        enemyHealth = 150;
+        MaxenemyHealth = 350;
+        enemyHealth = 350;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -29,7 +34,18 @@ public class BossStats : MonoBehaviour
 
         }
     }
+    
+     
+     public void UpdateHealthBar(float currentValue, float maxValue)
+    {
+        slider.value = currentValue / maxValue;
+    }
 
+     void Health()
+    {
+     
+    }
+   
 
     // Update is called once per frame
     void Update()
