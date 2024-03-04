@@ -16,7 +16,7 @@ public class DucketHatPickup : MonoBehaviour
     {
 
     }
-
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
@@ -40,6 +40,7 @@ public class DucketHatPickup : MonoBehaviour
         Destroy(Duck, 5f);
         GameObject DuckExplosion = Instantiate(duckExplosionModel, position, Quaternion.identity);
         Destroy(DuckExplosion, 1f);
+
         
     }
 }
