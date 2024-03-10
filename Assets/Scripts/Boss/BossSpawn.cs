@@ -18,11 +18,14 @@ public class BossSpawn : MonoBehaviour
 
     public GameObject BossText;
 
+    public GameObject Boss;
+
     #endregion
     void Start()
     {
+        Boss.SetActive(false);
 
-        
+
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -43,6 +46,7 @@ public class BossSpawn : MonoBehaviour
     void BossIsSpawning()
     {
         BossMenu.SetActive(true);
+        Boss.SetActive(true);
     }
     // Update is called once per frame
     void Update()

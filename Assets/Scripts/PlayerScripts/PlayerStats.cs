@@ -10,6 +10,7 @@ public class PlayerStats : MonoBehaviour
     public int playerXpThreshold;
     public int playerHp;
 
+    public HatPickup hatpickup;
 
     public TextMeshProUGUI PlayerHpUI;
 
@@ -75,8 +76,9 @@ public class PlayerStats : MonoBehaviour
     {
         playerLvl++;
         playerXpThreshold = playerLvl * 10;
-        
 
+
+        hatpickup.Upgrade(); 
 
     }
 

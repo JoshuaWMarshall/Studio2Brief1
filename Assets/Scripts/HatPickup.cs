@@ -4,30 +4,39 @@ using UnityEngine;
 
 public class HatPickup : MonoBehaviour
 {
-    public GameObject StrawHat;
-    public GameObject StrawHat1;
-    public GameObject StrawHatVisual;
+    public GameObject Fireball;
+    public GameObject Fireball1;
+    public GameObject WizardHatVisual;
+
+    public GameObject WizardButton; 
+
+    public GameObject UpgradeMenu;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        UpgradeMenu.SetActive(false);
+    }
+
+    public void Upgrade()
+    {
+        Time.timeScale = 0;
+
+        UpgradeMenu.SetActive(true);
+
+    }
+
+    public void Wizard()
+    {
+        Fireball.SetActive(true);
+        Fireball1.SetActive(true);
+        Time.timeScale = 1;
+        WizardButton.SetActive(false);
+        WizardHatVisual.SetActive(true);
+        UpgradeMenu.SetActive(false);
         
     }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Player")
-        {
-            Debug.Log("wIN");
-            
-            StrawHat.SetActive(true);
-            StrawHat1.SetActive(true);
-
-            StrawHatVisual.SetActive(true);
-
-            Destroy(gameObject);
-        }
-    }
+    
 
 }

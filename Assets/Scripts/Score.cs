@@ -17,7 +17,7 @@ public class Score : MonoBehaviour
 
     public GameObject GameMusic;
 
-    
+    public GameObject UpgradeMenu;
 
     public int enemyPoints;
 
@@ -72,6 +72,7 @@ public class Score : MonoBehaviour
         Time.timeScale = 1;
         PauseMenu.SetActive(false);
         GameMusic.SetActive(true);
+        UpgradeMenu.SetActive(false);
     }
 
 }
